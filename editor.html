@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor · Your Name</title>
+  <meta name="description" content="Editing and publishing workspace for a personal AI engineering blog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/editor.css">
+</head>
+<body class="editor-body">
+  <h1 class="sr-only">Content editor and publishing workspace</h1>
+  <header class="editor-topbar">
+    <a class="brand" href="index.html" aria-label="Back to site">
+      <span class="brand-mark">Y</span>
+      <span class="brand-copy">
+        <strong>Your Name</strong>
+        <span>AI Engineering Blog</span>
+      </span>
+    </a>
+    <div class="editor-actions">
+      <button class="text-button" id="saveDraft">Save draft</button>
+      <button class="btn primary" id="publishButton">Publish</button>
+    </div>
+  </header>
+
+  <main class="editor-shell">
+    <aside class="editor-sidebar" aria-label="Content library">
+      <div class="sidebar-block">
+        <p class="eyebrow">Library</p>
+        <button class="doc-item active">
+          <span>Draft</span>
+          <strong>What sits between a demo and a real product</strong>
+        </button>
+        <button class="doc-item">
+          <span>Case Study</span>
+          <strong>Designing an AI assistant for research workflows</strong>
+        </button>
+        <button class="doc-item">
+          <span>Note</span>
+          <strong>Prompt quality as a product surface</strong>
+        </button>
+      </div>
+      <div class="sidebar-block">
+        <p class="eyebrow">Site Sections</p>
+        <a href="index.html#writing">Writing</a>
+        <a href="index.html#cases">Project Cases</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </aside>
+
+    <section class="editor-main" aria-label="Post editor">
+      <div class="editor-status">
+        <span class="status-dot"></span>
+        Draft saved locally · Ready for review
+      </div>
+
+      <label class="field-label" for="postTitle">Title</label>
+      <input id="postTitle" class="title-input" value="What sits between a demo and a real product">
+
+      <div class="meta-grid">
+        <label>
+          <span>Slug</span>
+          <input value="demo-to-product">
+        </label>
+        <label>
+          <span>Tags</span>
+          <input value="AI Engineering, Product">
+        </label>
+        <label>
+          <span>Publish Date</span>
+          <input value="2026-07-01">
+        </label>
+      </div>
+
+      <label class="field-label" for="summary">Summary</label>
+      <textarea id="summary" class="summary-input">A field note on the invisible work required to turn model capability into a reliable product experience.</textarea>
+
+      <label class="field-label" for="bodyCopy">Body</label>
+      <textarea id="bodyCopy" class="body-input">Most AI demos prove that a model can do something once. Products need to prove that a team can rely on that capability repeatedly.
+
+The gap is usually not a single missing feature. It is the set of product surfaces around the model: input constraints, failure states, review loops, observability, rollback, pricing, and user trust.
+
+My current rule of thumb: if the user cannot understand when to trust the system, the product is still a demo with better packaging.</textarea>
+    </section>
+
+    <aside class="publish-panel" aria-label="Publishing panel">
+      <section class="panel-card">
+        <p class="eyebrow">Preview</p>
+        <article class="mini-preview">
+          <span>2026.07 · AI Engineering</span>
+          <h2 id="previewTitle">What sits between a demo and a real product</h2>
+          <p id="previewSummary">A field note on the invisible work required to turn model capability into a reliable product experience.</p>
+        </article>
+      </section>
+
+      <section class="panel-card">
+        <p class="eyebrow">Publish Checklist</p>
+        <label class="check-row">
+          <input type="checkbox" checked>
+          <span>Clear technical claim</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" checked>
+          <span>Readable opening paragraph</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox">
+          <span>Add one concrete project example</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" checked>
+          <span>SEO summary under 160 characters</span>
+        </label>
+      </section>
+
+      <section class="panel-card">
+        <p class="eyebrow">Distribution</p>
+        <div class="publish-target active">
+          <strong>Personal site</strong>
+          <span>/writing/demo-to-product</span>
+        </div>
+        <div class="publish-target">
+          <strong>Newsletter</strong>
+          <span>Queued as excerpt</span>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <div class="publish-toast" id="publishToast" role="status">
+    Published to personal site preview.
+  </div>
+
+  <script src="assets/editor.js"></script>
+</body>
+</html>

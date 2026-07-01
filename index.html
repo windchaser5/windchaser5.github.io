@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name · AI / Product / Writing</title>
+  <meta name="description" content="Your personal website for AI, product thinking, writing, and project case studies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("personal_site_theme");
+      if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    })();
+  </script>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark">Y</span>
+      <span class="brand-copy">
+        <strong>Your Name</strong>
+        <span>AI · Product · Writing</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#writing">Writing</a>
+      <a href="#cases">Project Cases</a>
+      <a href="#contact">Contact</a>
+      <a href="editor.html">Editor</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☼</button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Independent Builder / Product Thinker</p>
+        <h1>Hi, I'm <span>Your Name</span></h1>
+        <p class="hero-lead">
+          I explore how AI moves from demos into real products, teams, and everyday work. This site collects my writing, project case studies, and the questions I keep returning to.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#writing">Read Writing</a>
+          <a class="btn secondary" href="#cases">View Project Cases</a>
+        </div>
+      </div>
+      <aside class="hero-card reveal delay-1" aria-label="Personal hero visual">
+        <img src="assets/hero-portrait.png" alt="Abstract personal website hero visual">
+        <div class="signal-card">
+          <span>Now</span>
+          <strong>Turning complex questions into clear product decisions</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section muted" id="writing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Writing</p>
+          <h2>Writing & Notes</h2>
+          <p>A place for essays, reading notes, industry observations, and project reflections. Start with clear titles; links can be connected later.</p>
+        </div>
+
+        <div class="writing-list reveal">
+          <a class="post-row" href="#">
+            <time>2026.07</time>
+            <div>
+              <strong>When AI enters real workflows, collaboration boundaries shift first</strong>
+              <p>Notes on workflow design, ownership, and product responsibility.</p>
+            </div>
+            <span>AI</span>
+          </a>
+          <a class="post-row" href="#">
+            <time>2026.06</time>
+            <div>
+              <strong>Four questions a personal website should answer</strong>
+              <p>Positioning, credibility, project storytelling, and contact design.</p>
+            </div>
+            <span>Site</span>
+          </a>
+          <a class="post-row" href="#">
+            <time>2026.05</time>
+            <div>
+              <strong>What sits between a demo and a real product</strong>
+              <p>Turning capability into reusable experience requires product and engineering judgment.</p>
+            </div>
+            <span>Product</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="cases">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Project Cases</p>
+          <h2>Project Cases</h2>
+          <p>Longer-form stories about how I define problems, choose solutions, ship work, and reflect on outcomes.</p>
+        </div>
+
+        <div class="case-timeline reveal">
+          <article>
+            <time>Case 01</time>
+            <h3>Designing an AI assistant for research workflows from zero to one</h3>
+            <p>Problem framing, user journey, MVP scope, validation metrics, and iteration plan.</p>
+          </article>
+          <article>
+            <time>Case 02</time>
+            <h3>Rebuilding a content workflow from inspiration-driven to system-driven</h3>
+            <p>Information intake, source management, structured writing, and publishing rhythm.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Open to specific problems, thoughtful conversations, and long-term observations.</h2>
+        <div class="contact-links">
+          <a href="mailto:you@example.com">you@example.com</a>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn / X / Newsletter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
