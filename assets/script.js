@@ -49,3 +49,54 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+
+function escapeHtml(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function renderPerspectives(items) {
+  const root = document.getElementById("perspectivesList");
+  if (!root || !Array.isArray(items) || items.length === 0) return;
+
+  root.innerHTML = items.map((item) => `
+    <a class="post-row" href="${escapeHtml(item.url || "#")}" ${item.url ? 'target="_blank" rel="noopener"' : ""}>
+      <time>${escapeHtml(item.date || "")}</time>
+      <div>
+        <strong>${escapeHtml(item.title)}</strong>
+        <p>${escapeHtml(item.summary)}</p>
+      </div>
+      <span>${escapeHtml(item.tag || "Perspective")}</span>
+    </a>
+  `).join("");
+}
+
+function renderCases(items) {
+  const root = document.getElementById("casesGrid");
+  if (!root || !Array.isArray(items) || items.length === 0) return;
+
+  root.innerHTML = items.map((item, index) => `
+    <article class="case-card">
+      <time>${escapeHtml(item.label || `Case ${String(index + 1).padStart(2, "0")}`)}</time>
+      <h3>${escapeHtml(item.title)}</h3>
+      <p>${escapeHtml(item.summary)}</p>
+      <ul>
+        ${(item.points || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
+      </ul>
+    </article>
+  `).join("");
+}
+
+fetch("data/content.json?v=notion-cms-v1")
+  .then((response) => response.ok ? response.json() : null)
+  .then((content) => {
+    if (!content) return;
+    renderPerspectives(content.perspectives);
+    renderCases(content.cases);
+  })
+  .catch(() => {
+    // Keep the built-in fallback content if the static data file is unavailable.
+  });

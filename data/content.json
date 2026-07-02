@@ -1,0 +1,57 @@
+{
+  "perspectives": [
+    {
+      "date": "2026.07",
+      "title": "AI-native transformation is a workflow problem before it is a model problem",
+      "summary": "Why the first bottleneck is usually ownership, escalation paths, and decision rights.",
+      "tag": "Transformation",
+      "url": "#"
+    },
+    {
+      "date": "2026.06",
+      "title": "The enterprise agent stack needs governance by design",
+      "summary": "Trust, auditability, permissions, and rollback should be product surfaces, not compliance afterthoughts.",
+      "tag": "Agents",
+      "url": "#"
+    },
+    {
+      "date": "2026.05",
+      "title": "What investors should watch in enterprise AI adoption",
+      "summary": "Signals that separate novelty usage from durable organizational capability.",
+      "tag": "Market",
+      "url": "#"
+    }
+  ],
+  "cases": [
+    {
+      "label": "Case 01",
+      "title": "AI-native knowledge operations for a complex service organization",
+      "summary": "Mapped fragmented knowledge workflows, designed retrieval and review loops, and defined a path from expert-dependent operations to reusable institutional memory.",
+      "points": [
+        "Problem: tacit knowledge trapped across teams and tools",
+        "Approach: RAG workflow, source governance, human review checkpoints",
+        "Outcome: faster research cycles and clearer accountability for generated answers"
+      ]
+    },
+    {
+      "label": "Case 02",
+      "title": "Agent-assisted operating model for sales and customer success",
+      "summary": "Translated scattered customer signals into a structured AI workflow for account preparation, follow-up generation, and escalation detection.",
+      "points": [
+        "Problem: high-value context lost between meetings, CRM notes, and support logs",
+        "Approach: workflow agent, confidence thresholds, role-based handoff design",
+        "Outcome: better preparation quality and more consistent customer touchpoints"
+      ]
+    },
+    {
+      "label": "Case 03",
+      "title": "Executive AI transformation roadmap and pilot portfolio",
+      "summary": "Helped prioritize where AI should change operating leverage first, separating attractive demos from initiatives with clear adoption and measurement paths.",
+      "points": [
+        "Problem: too many AI ideas, too little transformation discipline",
+        "Approach: opportunity scoring, risk map, pilot portfolio design",
+        "Outcome: clearer sequencing for leadership, product, and implementation teams"
+      ]
+    }
+  ]
+}
